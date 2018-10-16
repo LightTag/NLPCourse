@@ -33,6 +33,21 @@ numMap = {
 
 }
 
+def makeCharVocab():
+    chars = set(''.join(numMap.values()))
+    vocab = {
+        '_PAD_':0,
+        '_START_':1,
+        '_END_':2
+    }
+    for num,char in enumerate(chars):
+        vocab[char] = num+3
+    return vocab
+
+vocab = makeCharVocab()
+reverseVocab = {val:key for key,val in vocab.items()}
+
+
 
 def handleRightPair(b, c, only=False):
     # handles tens places
