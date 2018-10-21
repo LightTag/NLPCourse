@@ -126,7 +126,7 @@ def handleNumber(num):
 
 
 
-def createNum2WordDict(size,high=(10 **18) - 1):
+def  eNum2WordDict(size,high=(10 **18) - 1):
     result = {}
     for num in np.random.randint(0,high,size):
         result[num] = handleNumber(num)
